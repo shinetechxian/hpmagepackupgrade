@@ -1,0 +1,72 @@
+{
+    "name": "hpmagepackupgrade",
+    "version": "2.4.1",
+    "bin": "./cli.js",
+    "repository": "https://github.com/shinetechxian/hpmagepackupgrade.git",
+    "author": "creativestyle",
+    "license": "OSL-2.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "engines": {
+        "node": ">=10"
+    },
+    "dependencies": {
+        "commander": "^5.0.0",
+        "consola": "^2.11.3",
+        "glob": "^7.1.6",
+        "gzip-size": "^5.1.1",
+        "javascript-stringify": "^2.0.1",
+        "jsesc": "^3.0.1",
+        "lodash.merge": "^4.6.2",
+        "terser": "^4.6.7"
+    },
+    "lint-staged": {
+        "*.json": [
+            "prettier --write"
+        ],
+        "*.js": [
+            "prettier --write",
+            "eslint --fix"
+        ]
+    },
+    "prettier": {
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "tabWidth": 4
+    },
+    "eslintConfig": {
+        "env": {
+            "node": true,
+            "es6": true,
+            "jest": true
+        },
+        "extends": [
+            "eslint:recommended",
+            "prettier",
+            "plugin:prettier/recommended"
+        ],
+        "parserOptions": {
+            "ecmaVersion": 8
+        }
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.1",
+        "eslint-plugin-prettier": "^3.1.2",
+        "husky": "^4.2.3",
+        "jest": "^26.1.0",
+        "lint-staged": "^10.1.0",
+        "prettier": "^2.0.2"
+    },
+    "optionalDependencies": {
+        "puppeteer": "^2.1.1"
+    }
+}
