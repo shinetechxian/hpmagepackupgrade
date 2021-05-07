@@ -1,8 +1,8 @@
 {
-    "name": "magepack",
+    "name": "hpmagepackupgrade",
     "version": "2.4.1",
     "bin": "./cli.js",
-    "repository": "https://github.com/magesuite/magepack.git",
+    "repository": "https://github.com/shinetechxian/hpmagepackupgrade.git",
     "author": "creativestyle",
     "license": "OSL-2.0",
     "main": "index.js",
