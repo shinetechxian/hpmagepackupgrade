@@ -22,6 +22,8 @@ program
     .option('-u, --auth-username <user>', 'Basic authentication username.')
     .option('-p, --auth-password <password>', 'Basic authentication password.')
     .option('-d, --debug', 'Enable logging of debugging information.')
+    .option('-t, --timeout', 'Set timeout time.')
+    .option('-proxy, --proxy', 'Set proxy.')
     .action((config) => {
         if (config.debug) {
             logger.level = 5;

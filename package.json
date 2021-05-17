@@ -1,6 +1,6 @@
 {
     "name": "hpmagepackupgrade",
-    "version": "2.4.1",
+    "version": "0.0.1",
     "bin": "./cli.js",
     "repository": "https://github.com/shinetechxian/hpmagepackupgrade.git",
     "author": "creativestyle",
