@@ -1,8 +1,8 @@
-# Magepack 🚀
+# hpmagepackupgrade 🚀
 
-**Version 2.0.0 of Magepack released, with greater performance results and easier usage!**
+**Version 2.0.0 of hpmagepackupgrade released, with greater performance results and easier usage!**
 
-Magepack is a bold attempt in making Magento 2 frontend as fast as never before. It builds on experiences gained with [Advanced JavaScript bundling guide](https://devdocs.magento.com/guides/v2.3/performance-best-practices/advanced-js-bundling.html) and [Baler](https://github.com/magento/baler) to provide the best of both worlds - ease of use and superior performance.
+hpmagepackupgrade is a bold attempt in making Magento 2 frontend as fast as never before. It builds on experiences gained with [Advanced JavaScript bundling guide](https://devdocs.magento.com/guides/v2.3/performance-best-practices/advanced-js-bundling.html) and [Baler](https://github.com/magento/baler) to provide the best of both worlds - ease of use and superior performance.
 
 ## Top highlights\*
 
@@ -17,7 +17,7 @@ _\* All data gathered on clean Magento 2 with sample data installed._
 
 ## Installing
 
-Here are the requirements for Magepack to work:
+Here are the requirements for hpmagepackupgrade to work:
 
 1. You need Node.js version 10 or higher installed.
 2. If you are using Magento 2.3.5 or lower, you need to have `mixins.js` module patched [(patch provided and explained here)](https://github.com/magento/baler/issues/23).
@@ -27,19 +27,19 @@ Here are the requirements for Magepack to work:
 Install with npm:
 
 ```
-npm install -g magepack
+npm install -g hpmagepackupgrade
 ```
 
 Install with yarn:
 
 ```
-yarn global add magepack
+yarn global add hpmagepackupgrade
 ```
 
 ## Usage
 
 ```shell
-Usage: magepack [generate|bundle] <options...>
+Usage: hpmagepackupgrade [generate|bundle] <options...>
 
 Options:
   -v, --version       Output the current version.
@@ -64,7 +64,7 @@ In addition, there is the `common` bundle created by extracting all modules need
 #### Running the generator
 
 ```
-magepack generate --cms-url="{{CMS_PAGE_URL}}" --category-url="{{CATEGORY_PAGE_URL}}" --product-url="{{PRODUCT_PAGE_URL}}"
+hpmagepackupgrade generate --cms-url="{{CMS_PAGE_URL}}" --category-url="{{CATEGORY_PAGE_URL}}" --product-url="{{PRODUCT_PAGE_URL}}"
 ```
 
 There are 3 required options you need to pass:
@@ -75,7 +75,7 @@ There are 3 required options you need to pass:
 
 `--product-url` - URL to one of product pages.
 
-_Note: Magepack will use given product page, add this product to the cart and visit both cart and checkout pages to collect dependencies._
+_Note: hpmagepackupgrade will use given product page, add this product to the cart and visit both cart and checkout pages to collect dependencies._
 
 Running the above command will generate `magepack.config.js` file, where you can find each of the prepared bundles with the list of modules that will be included in them.
 
@@ -84,7 +84,7 @@ Running the above command will generate `magepack.config.js` file, where you can
 Once you have generated bundler configuration, the next step would be to trigger the actual optimization **after static content deploy stage has finished** by running the following in shop root directory:
 
 ```
-magepack bundle
+hpmagepackupgrade bundle
 ```
 
 This command will iterate over each deployed locale (excluding Magento/blank) and prepare bundles for each of them.
